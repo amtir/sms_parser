@@ -7,12 +7,12 @@ connect, disconnect, update, upload, etc
 
 ## Reading and deleting a SMS message 
 
-![connect message](/home/pi/sms_parser/connect_command.png)
+![connect message](connect_command.png)
 
 
 ## Empty SMS 
 
-![empty message](/home/pi/sms_parser/empty_content.png)
+![empty message](empty_content.png)
 
 
 ## License
