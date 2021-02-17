@@ -1,0 +1,85 @@
+
+
+
+
+> sudo bash sms_delete_api.sh 
+##################################################################
+
+ Checking the IOT interfaces - mercredi 17 février 2021, 12:35:30 (UTC+0100).
+
+##################################################################
+ [+] ->  eth1 Modem 4G LTE is activated.
+
+Checking the SMS server ...
+ [+] ->  SMS server alive.
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   274  100   105  100   169   1529   2461 --:--:-- --:--:-- --:--:--  2485
+
+ [-] ->  Empty content.
+
+
+
+
+
+
+
+
+> sudo bash sms_delete_api.sh 
+##################################################################
+
+ Checking the IOT interfaces - mercredi 17 février 2021, 12:35:46 (UTC+0100).
+
+##################################################################
+ [+] ->  eth1 Modem 4G LTE is activated.
+
+Checking the SMS server ...
+ [+] ->  SMS server alive.
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   533  100   364  100   169   5240   2433 --:--:-- --:--:-- --:--:--  5275
+
+ [+] -> Command received: connect, Date: 2021-02-17 12:35:42 
+
+##################################################################
+
+Delete SMS messages.
+
+##################################################################
+Cookie: B0LPk0Wvp2UqS3mEagRSiwo7YYFoUKbHphpLARMJzRjrdgS5HyrsFW8xXCTR1ICta46hW2dUS6dRr1qKO6RAzSbmkgrOsxZryLxDa7092pzHNCkI0OwfHf5sHY3Xki6z
+Token: bA0hR5oRtJCeWFkmZsvGfE0zeDPCxmCP
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   534  100   364  100   170   5551   2592 --:--:-- --:--:-- --:--:--  5600
+
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<Count>1</Count>
+	<Messages>
+		<Message>
+			<Smstat>0</Smstat>
+			<Index>40002</Index>
+			<Phone>+41796201615</Phone>
+			<Content>connect</Content>
+			<Date>2021-02-17 12:35:42</Date>
+			<Sca></Sca>
+			<SaveType>0</SaveType>
+			<Priority>0</Priority>
+			<SmsType>1</SmsType>
+		</Message>
+	</Messages>
+</response><?xml version="1.0" encoding="UTF-8"?><request><Index>${index[$i]}</Index></request>
+
+
+
+
+
+
+> cat result_status.xml 
+
+40002
+<?xml version="1.0" encoding="UTF-8"?>
+<response>OK</response>
+
