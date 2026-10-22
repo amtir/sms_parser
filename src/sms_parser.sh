@@ -52,7 +52,7 @@ then
     echo " [+] ->  eth1 Modem 4G LTE is activated."
     echo
     echo "Checking the SMS server ..."
-    RESPONSE=`curl -s -X GET http://192.168.8.1/api/webserver/SesTokInfo`
+    RESPONSE=`curl -s -X GET http://$MODEM_IP/api/webserver/SesTokInfo`
     
     # Check the returned exit value
     if [ "$?" = "0" ]; then
@@ -71,7 +71,7 @@ then
     DATA="<request><PageIndex>1</PageIndex><ReadCount>1</ReadCount><BoxType>1</BoxType><SortType>0</SortType><Ascending>0</Ascending><UnreadPreferred>1</UnreadPreferred></request>"
     
     # Get the last SMS sent
-    MESSAGE=`curl -H "Cookie: $COOKIE" -H "__RequestVerificationToken: $TOKEN" --data "$DATA" http://192.168.8.1/api/sms/sms-list`
+    MESSAGE=`curl -H "Cookie: $COOKIE" -H "__RequestVerificationToken: $TOKEN" --data "$DATA" http://$MODEM_IP/api/sms/sms-list`
     CONTENT=`echo "$MESSAGE" | xmlstarlet sel -t -v '//Content' -n`
     DATE=`echo "$MESSAGE" | xmlstarlet sel -t -v '//Date' -n`
     
@@ -109,14 +109,14 @@ echo "Delete SMS messages."
 echo
 echo "##################################################################"
 
-RESPONSE=`curl -s -X GET http://192.168.8.1/api/webserver/SesTokInfo`
+RESPONSE=`curl -s -X GET http://$MODEM_IP/api/webserver/SesTokInfo`
 COOKIE=`echo "$RESPONSE" | xmlstarlet sel -t -v '//SesInfo' -n`
 TOKEN=`echo "$RESPONSE" | xmlstarlet sel -t -v '//TokInfo' -n`
 
 echo "Cookie: $COOKIE"
 echo "Token: $TOKEN"
 DATA="<request><PageIndex>1</PageIndex><ReadCount>35</ReadCount><BoxType>1</BoxType><SortType>0</SortType><Ascending>0</Ascending><UnreadPreferred>1</UnreadPreferred></request>"
-echo `curl -H "Cookie: $COOKIE" -H "__RequestVerificationToken: $TOKEN" --data "$DATA" http://192.168.8.1/api/sms/sms-list > modem_status.xml`
+echo `curl -H "Cookie: $COOKIE" -H "__RequestVerificationToken: $TOKEN" --data "$DATA" http://$MODEM_IP/api/sms/sms-list > modem_status.xml`
 
 
 cat modem_status.xml
@@ -130,7 +130,7 @@ touch result_status.xml
 for ((i=0; i<${#array_index[@]}; i++ ))
 do
      
-     RESPONSE=`curl -s -X GET http://192.168.8.1/api/webserver/SesTokInfo`
+     RESPONSE=`curl -s -X GET http://$MODEM_IP/api/webserver/SesTokInfo`
      COOKIE=`echo "$RESPONSE" | xmlstarlet sel -t -v '//SesInfo' -n`
      TOKEN=`echo "$RESPONSE" | xmlstarlet sel -t -v '//TokInfo' -n`
      

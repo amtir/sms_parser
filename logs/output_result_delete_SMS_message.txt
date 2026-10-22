@@ -48,8 +48,8 @@ Checking the SMS server ...
 Delete SMS messages.
 
 ##################################################################
-Cookie: B0LPk0Wvp2UqS3mEagRSiwo7YYFoUKbHphpLARMJzRjrdgS5HyrsFW8xXCTR1ICta46hW2dUS6dRr1qKO6RAzSbmkgrOsxZryLxDa7092pzHNCkI0OwfHf5sHY3Xki6z
-Token: bA0hR5oRtJCeWFkmZsvGfE0zeDPCxmCP
+Cookie: <redacted>
+Token: <redacted>
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100   534  100   364  100   170   5551   2592 --:--:-- --:--:-- --:--:--  5600
@@ -61,7 +61,7 @@ Token: bA0hR5oRtJCeWFkmZsvGfE0zeDPCxmCP
 		<Message>
 			<Smstat>0</Smstat>
 			<Index>40002</Index>
-			<Phone>+41796201615</Phone>
+			<Phone>+41XXXXXXXXX</Phone>
 			<Content>connect</Content>
 			<Date>2021-02-17 12:35:42</Date>
 			<Sca></Sca>
